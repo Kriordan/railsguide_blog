@@ -53,4 +53,5 @@ group :development, :test do
   gem 'valid_attribute'
   gem 'shoulda-matchers'
   gem 'dotenv'
+  gem 'quiet_assets'
 end
