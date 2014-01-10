@@ -1,0 +1,12 @@
+<p>
+  <strong>Title:</strong>
+  <%= @post.title %>
+</p>
+
+<p>
+  <strong>Text:</strong>
+  <%= @post.text %>
+</p>
+
+<%= link_to "All the other posts!", posts_path %>
+| <%= link_to "Edit some things", edit_post_path(@post) %>

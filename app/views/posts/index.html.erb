@@ -1,0 +1,25 @@
+<h1>Look at all them posts!</h1>
+
+<%= link_to "New Post", new_post_path %>
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Text</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>  
+  <tbody>
+    <% @posts.each do |post| %>
+    <tr>
+      <td><%= post.title %></td>
+      <td><%= post.text %></td>
+      <td><%= link_to 'Show', post_path(post) %></td>
+      <td><%= link_to 'Edit', edit_post_path(post) %></td>
+      <td><%= link_to 'Delete', post_path(post), method: :delete, data: { confirm: 'You sure brah?' } %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
